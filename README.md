@@ -6,6 +6,7 @@ This repo is a collection of some ComfyUI workflows.
 
 Latests:
 
+* [ComfyUI + Pulid + FLUX face cloning and style transfer](https://youtu.be/R1CKgzkOEYk)
 * [ComfyUI + SD3.5](https://youtu.be/8HYVAzYRYV4)
 
 
