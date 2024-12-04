@@ -1,11 +1,12 @@
 # ComfyUI_workflows_collection
 
-This repo is a collection of some ComfyUI workflows. 
+This repo is a collection of some ComfyUI workflows. Most of them have been covered in video tutorials. 
 
 # usage
 
 Latests:
 
+* [ComfyUI + LTX_Video_text to video](https://youtu.be/A0FSyx2E5tI)
 * [ComfyUI + Pulid + FLUX face cloning and style transfer](https://youtu.be/R1CKgzkOEYk)
 * [ComfyUI + SD3.5](https://youtu.be/8HYVAzYRYV4)
 
