@@ -2,14 +2,12 @@
 
 This repo is a collection of some ComfyUI workflows. Most of them have been covered in video tutorials. 
 
-# usage
+# Latests:
 
-Latests:
-
-* [ComfyUI + LTX_Video_text to video](https://youtu.be/A0FSyx2E5tI)
+* [ComfyUI + HunyuanVideo text to video](https://youtu.be/R2VPQtJfTDY)
+* [ComfyUI + LTX_Video text to video](https://youtu.be/A0FSyx2E5tI)
 * [ComfyUI + Pulid + FLUX face cloning and style transfer](https://youtu.be/R1CKgzkOEYk)
 * [ComfyUI + SD3.5](https://youtu.be/8HYVAzYRYV4)
-
 
 # For video tutorials:
 
@@ -18,6 +16,8 @@ Latests:
 * [ComfyUi + FLUX + GGUF (low vram) ](https://youtu.be/9Sg9tHdTzRs)
 * [ComfyUI + FLUX + LoRA](https://youtu.be/HhXPnjFE3uc)
 * [ComfyUI + FLUX + Controlnet with or without GGUF](https://youtu.be/NRnU83vBkTs)
+
+# usage
 
 Download the workflow files (.png or .json) and then: 
 
