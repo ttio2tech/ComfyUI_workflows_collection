@@ -1,9 +1,11 @@
 # ComfyUI_workflows_collection
 
-This repo is a collection of some ComfyUI workflows. Most of them have been covered in video tutorials. 
+This repo is a collection of some ComfyUI workflows. Most of them have been covered in video tutorials (see below). 
 
 # Latests:
 
+* [SD3.5 Large + Lora](https://youtu.be/OuTEUrf4vvo) 
+  I finetuned a Lora using Macbook. Download it free from [huggingface](https://huggingface.co/Ttio2/sketch_shouxin)
 * [ComfyUI + HunyuanVideo text to video](https://youtu.be/R2VPQtJfTDY)
 * [ComfyUI + LTX_Video text to video](https://youtu.be/A0FSyx2E5tI)
 * [ComfyUI + Pulid + FLUX face cloning and style transfer](https://youtu.be/R1CKgzkOEYk)
@@ -21,7 +23,7 @@ This repo is a collection of some ComfyUI workflows. Most of them have been cove
 
 Download the workflow files (.png or .json) and then: 
 
-0. download the checkpoint model files
+0. download the checkpoint model files, install missing custom nodes.
 1. drag and drop the .json or .png file to the ComfyUI to load the workflow.
 2. customize the checkpoint models
 3. run the workflow 
