@@ -4,6 +4,8 @@ This repo is a collection of some ComfyUI workflows. Most of them have been cove
 
 # Latests:
 
+* [Mac/MacBook Run HunyuanVideo](https://youtu.be/W6g_mCARTfM)
+* [AMD GPU Run HunyuanVideo](https://youtu.be/I6jzCJIii_o)
 * [SD3.5 Large + Lora](https://youtu.be/OuTEUrf4vvo) 
   I finetuned a Lora using Macbook. Download it free from [huggingface](https://huggingface.co/Ttio2/sketch_shouxin)
 * [ComfyUI + HunyuanVideo text to video](https://youtu.be/R2VPQtJfTDY)
