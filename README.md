@@ -1,9 +1,10 @@
 # ComfyUI_workflows_collection
 
-This repo is a collection of some ComfyUI workflows. Most of them have been covered in video tutorials (see below). 
+This repo is a collection of ComfyUI workflows. Most of them have been covered in video tutorials (see below). 
 
 # Latests:
 
+* [LoRA use and training guide for HunyuanVideo](https://youtu.be/q2g82ePnZVs)
 * [Mac/MacBook Run HunyuanVideo](https://youtu.be/W6g_mCARTfM)
 * [AMD GPU Run HunyuanVideo](https://youtu.be/I6jzCJIii_o)
 * [SD3.5 Large + Lora](https://youtu.be/OuTEUrf4vvo) 
@@ -15,6 +16,7 @@ This repo is a collection of some ComfyUI workflows. Most of them have been cove
 
 # For video tutorials:
 
+* [LoRA use and training guide for HunyuanVideo](https://youtu.be/q2g82ePnZVs)
 * [ComfyUi installation on Macbooks](https://youtu.be/ZCswfm0dBYY)
 * [ComfyUI + FLUX](https://youtu.be/ZCswfm0dBYY)
 * [ComfyUi + FLUX + GGUF (low vram) ](https://youtu.be/9Sg9tHdTzRs)
