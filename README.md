@@ -4,6 +4,7 @@ This repo is a collection of ComfyUI workflows. Most of them have been covered i
 
 # Latests:
 
+* [RTX 5090 Run ComfyUI](https://youtu.be/WgWeDxJUoD0)
 * [LoRA use and training guide for HunyuanVideo](https://youtu.be/q2g82ePnZVs)
 * [Mac/MacBook Run HunyuanVideo](https://youtu.be/W6g_mCARTfM)
 * [AMD GPU Run HunyuanVideo](https://youtu.be/I6jzCJIii_o)
