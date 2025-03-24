@@ -1,9 +1,12 @@
 # ComfyUI_workflows_collection
 
-This repo is a collection of ComfyUI workflows. Most of them have been covered in video tutorials (see below). 
+This repo is a collection of ComfyUI workflows. Most of them have been covered in video tutorials (see below).
+
+To run them online, try them free at [this site](https://agireact.com)
 
 # Latests:
 
+* [Wan2.1 Macbook MacMini text to video](https://youtu.be/SAX-Pue7kSw) 
 * [TeaCache-ComfyUI speedup](https://youtu.be/q6mZLBiKZ2M) 
 * [Wan 2.1 text or image to videos](https://youtu.be/tBKd2vB4n2o)
 * [RTX 5090 Run ComfyUI](https://youtu.be/WgWeDxJUoD0)
@@ -20,6 +23,7 @@ This repo is a collection of ComfyUI workflows. Most of them have been covered i
 # For video tutorials:
 
 * [TeaCache-ComfyUI speedup](https://youtu.be/q6mZLBiKZ2M)
+* [Wan 2.1 text or image to videos](https://youtu.be/tBKd2vB4n2o)
 * [LoRA use and training guide for HunyuanVideo](https://youtu.be/q2g82ePnZVs)
 * [ComfyUi installation on Macbooks](https://youtu.be/ZCswfm0dBYY)
 * [ComfyUI + FLUX](https://youtu.be/ZCswfm0dBYY)
