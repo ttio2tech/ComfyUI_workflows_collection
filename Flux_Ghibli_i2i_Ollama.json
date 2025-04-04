@@ -1,0 +1,968 @@
+{
+  "last_node_id": 20,
+  "last_link_id": 23,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "VAEDecode",
+      "pos": [
+        4932.94482421875,
+        4293.83837890625
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 2
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 3,
+      "type": "FluxGuidance",
+      "pos": [
+        4012.94482421875,
+        4303.83837890625
+      ],
+      "size": [
+        317.4000244140625,
+        58
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "shape": 3,
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxGuidance"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 4,
+      "type": "VAELoader",
+      "pos": [
+        4602.94482421875,
+        4603.8388671875
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            3,
+            8
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ae.safetensors"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "InstructPixToPixConditioning",
+      "pos": [
+        4338.4580078125,
+        4305.9091796875
+      ],
+      "size": [
+        235.1999969482422,
+        86
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        },
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            15
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            16
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InstructPixToPixConditioning"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "SaveImage",
+      "pos": [
+        5279.029296875,
+        4234.001953125
+      ],
+      "size": [
+        746.9424438476562,
+        569.83642578125
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "UNETLoader",
+      "pos": [
+        3330.75390625,
+        3597.5166015625
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            11
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux1-canny-dev.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LoraLoader",
+      "pos": [
+        3884.12890625,
+        3473.486328125
+      ],
+      "size": [
+        315,
+        126
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 11
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            17
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            18
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "flux1-turbo-alpha.safetensors",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "type": "KSampler",
+      "pos": [
+        4602.94482421875,
+        4293.83837890625
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 13
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 14
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 15
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        784139354839340,
+        "increment",
+        12,
+        1,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "DualCLIPLoader",
+      "pos": [
+        3154.9677734375,
+        4363.83837890625
+      ],
+      "size": [
+        315,
+        122
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            12,
+            22
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_l.safetensors",
+        "t5xxl_fp16.safetensors",
+        "flux",
+        "default"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "LoadImage",
+      "pos": [
+        5264.76904296875,
+        3493.112060546875
+      ],
+      "size": [
+        750.6107788085938,
+        698.00537109375
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "shape": 3,
+          "links": [
+            19,
+            23
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "shape": 3,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Screenshot From 2025-03-13 13-15-47.png",
+        "image"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "CLIPTextEncode",
+      "pos": [
+        3579.010986328125,
+        4195.4521484375
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 20
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "ghibli style, Portrait of a woman with green eyes, light skin, dark eyeliner, pink lips, partially lit face, looking directly at the camera, realistic, 8k photo",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 18,
+      "type": "CLIPTextEncode",
+      "pos": [
+        3619.944580078125,
+        4535.8388671875
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Negative Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 19,
+      "type": "Canny",
+      "pos": [
+        3783.35400390625,
+        4800.46875
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "shape": 3,
+          "links": [
+            1,
+            9
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Canny"
+      },
+      "widgets_values": [
+        0.1,
+        0.25
+      ]
+    },
+    {
+      "id": 1,
+      "type": "PreviewImage",
+      "pos": [
+        4215.42822265625,
+        4713.36279296875
+      ],
+      "size": [
+        571.5869140625,
+        625.5296020507812
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 15,
+      "type": "OllamaVision",
+      "pos": [
+        2639.131103515625,
+        4228.48583984375
+      ],
+      "size": [
+        417.9920349121094,
+        340.81951904296875
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "description",
+          "type": "STRING",
+          "links": [
+            5,
+            21
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaVision"
+      },
+      "widgets_values": [
+        "Generate a description of an image by accurately listing all objects, people, and details, but translate the style into a Ghibli-style comic illustration. Maintain precision in depicting poses, clothing, and hairstyles while transforming these elements into the whimsical and vibrant Ghibli aesthetic. Ensure the description is concise yet detailed. Ensure to add \"Ghibli Cartoon style in the beginning\" ",
+        "enable",
+        "http://127.0.0.1:11434",
+        "minicpm-v:latest",
+        5,
+        "text",
+        1503787952,
+        "fixed",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "type": "easy showAnything",
+      "pos": [
+        3123.8427734375,
+        3938.09765625
+      ],
+      "size": [
+        390,
+        260
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "shape": 7,
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "In this image, we see a close-up of an individual with striking blue eyes that seem almost lifelike against their fair complexion. Their hair is pulled back into a sleek ponytail, secured tightly by what appears to be a simple black elastic band or clip.\n\nThe person's gaze seems intense and direct, as if they're engaging in conversation face-to-face. The light catches beautifully on the contours of her high cheekbones and nose bridge, accentuating her features with soft shadows that add depth to her look.\n\nIn Ghibli Cartoon style at the beginning"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "Note",
+      "pos": [
+        2657.607666015625,
+        4752.0126953125
+      ],
+      "size": [
+        743.1620483398438,
+        319.05462646484375
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "\nAuthor: Tech Practice. Youtube channel: https://www.youtube.com/@tech-practice9805\n\n\nDownload the lora model from https://huggingface.co/alvarobartt/ghibli-characters-flux-lora and save it in ComfyUI models/lora direactory"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 12,
+      "type": "LoraLoader",
+      "pos": [
+        4338.64013671875,
+        3551.626708984375
+      ],
+      "size": [
+        451.2906799316406,
+        148.0371551513672
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 17
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "shape": 3,
+          "links": [
+            13
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "shape": 3,
+          "links": [
+            20
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "ghibli-characters-flux-lora.safetensors",
+        1,
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      19,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      11,
+      0,
+      2,
+      0,
+      "LATENT"
+    ],
+    [
+      3,
+      4,
+      0,
+      2,
+      1,
+      "VAE"
+    ],
+    [
+      4,
+      17,
+      0,
+      3,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      15,
+      0,
+      5,
+      0,
+      "*"
+    ],
+    [
+      6,
+      3,
+      0,
+      7,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      18,
+      0,
+      7,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      4,
+      0,
+      7,
+      2,
+      "VAE"
+    ],
+    [
+      9,
+      19,
+      0,
+      7,
+      3,
+      "IMAGE"
+    ],
+    [
+      10,
+      2,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      9,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      12,
+      13,
+      0,
+      10,
+      1,
+      "CLIP"
+    ],
+    [
+      13,
+      12,
+      0,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      14,
+      7,
+      0,
+      11,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      7,
+      1,
+      11,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      7,
+      2,
+      11,
+      3,
+      "LATENT"
+    ],
+    [
+      17,
+      10,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      18,
+      10,
+      1,
+      12,
+      1,
+      "CLIP"
+    ],
+    [
+      19,
+      16,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      12,
+      1,
+      17,
+      0,
+      "CLIP"
+    ],
+    [
+      21,
+      15,
+      0,
+      17,
+      1,
+      "STRING"
+    ],
+    [
+      22,
+      13,
+      0,
+      18,
+      0,
+      "CLIP"
+    ],
+    [
+      23,
+      16,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6588450000000027,
+      "offset": [
+        -2080.577685989848,
+        -3550.7917881443395
+      ]
+    },
+    "ue_links": []
+  },
+  "version": 0.4
+}
