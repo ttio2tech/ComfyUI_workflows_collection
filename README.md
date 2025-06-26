@@ -6,6 +6,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # Latests:
 
+* [Flux.1 Kontext Workflow](https://youtu.be/vffPMtIsqGg) 
 * [Wan2.1 Macbook MacMini text to video](https://youtu.be/SAX-Pue7kSw) 
 * [TeaCache-ComfyUI speedup](https://youtu.be/q6mZLBiKZ2M) 
 * [Wan 2.1 text or image to videos](https://youtu.be/tBKd2vB4n2o)
@@ -22,6 +23,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # For video tutorials:
 
+* [Flux.1 Kontext Workflow](https://youtu.be/vffPMtIsqGg) 
 * [TeaCache-ComfyUI speedup](https://youtu.be/q6mZLBiKZ2M)
 * [Wan 2.1 text or image to videos](https://youtu.be/tBKd2vB4n2o)
 * [LoRA use and training guide for HunyuanVideo](https://youtu.be/q2g82ePnZVs)
