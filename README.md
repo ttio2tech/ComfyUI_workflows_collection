@@ -6,6 +6,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # Latests:
 
+* [Flux.1 Kontext Macbook Workflow](https://youtu.be/y0BsNT7ihxs) 
 * [Flux.1 Kontext Workflow](https://youtu.be/vffPMtIsqGg) 
 * [Wan2.1 Macbook MacMini text to video](https://youtu.be/SAX-Pue7kSw) 
 * [TeaCache-ComfyUI speedup](https://youtu.be/q6mZLBiKZ2M) 
@@ -23,6 +24,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # For video tutorials:
 
+* [Flux.1 Kontext Macbook Workflow](https://youtu.be/y0BsNT7ihxs) 
 * [Flux.1 Kontext Workflow](https://youtu.be/vffPMtIsqGg) 
 * [TeaCache-ComfyUI speedup](https://youtu.be/q6mZLBiKZ2M)
 * [Wan 2.1 text or image to videos](https://youtu.be/tBKd2vB4n2o)
