@@ -6,6 +6,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # Latests:
 
+* [Wan2.2 text or image to video](https://youtu.be/VtrX4C_iQp8)
 * [Wan2.1 First Last Frame video generating. wan2.1_flf2v_720_f16](https://youtu.be/bRwzmfgnQx8)
 * [OmniGen2 Workflow](https://youtu.be/JNzRJxXa3H4) 
 * [Flux.1 Kontext Macbook Workflow](https://youtu.be/y0BsNT7ihxs) 
@@ -17,6 +18,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # For video tutorials:
 
+* [Wan2.2 text or image to video](https://youtu.be/VtrX4C_iQp8)
 * [Wan2.1 First Last Frame video generating. wan2.1_flf2v_720_f16](https://youtu.be/bRwzmfgnQx8)
 * [OmniGen2 Workflow](https://youtu.be/JNzRJxXa3H4) 
 * [Flux.1 Kontext Macbook Workflow](https://youtu.be/y0BsNT7ihxs) 
