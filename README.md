@@ -6,6 +6,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # Latests:
 
+* [Qwen-image workflow](https://youtu.be/-Y1SQFCrQzs)
 * [wan2.2_14B_t2v_lora_tech-practice](https://youtu.be/kacNtZ9_SFM)
 * [Wan2.2 text or image to video](https://youtu.be/VtrX4C_iQp8)
 * [Wan2.1 First Last Frame video generating. wan2.1_flf2v_720_f16](https://youtu.be/bRwzmfgnQx8)
@@ -19,6 +20,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # For video tutorials:
 
+* [Qwen-image workflow](https://youtu.be/-Y1SQFCrQzs)
 * [wan2.2_14B_t2v_lora_tech-practice](https://youtu.be/kacNtZ9_SFM)
 * [Wan2.2 text or image to video](https://youtu.be/VtrX4C_iQp8)
 * [Wan2.1 First Last Frame video generating. wan2.1_flf2v_720_f16](https://youtu.be/bRwzmfgnQx8)
