@@ -6,6 +6,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # Latests:
 
+* [Qwen_image_edit](https://youtu.be/Xg0W9N5res4)
 * [wan2_2_14B_i2v_Macbook_tech-practice](https://youtu.be/9f8Dficll5c)
 * [Qwen-image workflow](https://youtu.be/-Y1SQFCrQzs)
 * [wan2.2_14B_t2v_lora_tech-practice](https://youtu.be/kacNtZ9_SFM)
@@ -21,6 +22,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # For video tutorials:
 
+* [Qwen_image_edit](https://youtu.be/Xg0W9N5res4)
 * [wan2_2_14B_i2v_Macbook_tech-practice](https://youtu.be/9f8Dficll5c)
 * [Qwen-image workflow](https://youtu.be/-Y1SQFCrQzs)
 * [wan2.2_14B_t2v_lora_tech-practice](https://youtu.be/kacNtZ9_SFM)
