@@ -6,6 +6,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # Latests:
 
+* [Wan 2.2 text to image generating](https://youtu.be/U1pKwetqDL4)
 * [Qwen_image_edit](https://youtu.be/Xg0W9N5res4)
 * [wan2_2_14B_i2v_Macbook_tech-practice](https://youtu.be/9f8Dficll5c)
 * [Qwen-image workflow](https://youtu.be/-Y1SQFCrQzs)
@@ -22,6 +23,7 @@ To run them online, try them free at [this site](https://agireact.com)
 
 # For video tutorials:
 
+* [Wan 2.2 text to image generating](https://youtu.be/U1pKwetqDL4)
 * [Qwen_image_edit](https://youtu.be/Xg0W9N5res4)
 * [wan2_2_14B_i2v_Macbook_tech-practice](https://youtu.be/9f8Dficll5c)
 * [Qwen-image workflow](https://youtu.be/-Y1SQFCrQzs)
