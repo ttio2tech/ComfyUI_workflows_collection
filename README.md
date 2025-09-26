@@ -6,6 +6,7 @@ To run them online, try it free at [this site](https://agireact.com)
 
 # Latests:
 
+* Wan 2.2 Animate workflow With input video and image. Two mode: Character replacement and Pose transfer.
 * [Wan 2.2 Animate workflow](https://youtu.be/ATlpxSwENls)
 * [Wan 2.2 text to image generating](https://youtu.be/U1pKwetqDL4)
 * [Qwen_image_edit](https://youtu.be/Xg0W9N5res4)
