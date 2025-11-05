@@ -4,10 +4,12 @@ This repo is a collection of ComfyUI workflows. Most of them have been covered i
 
 To run them online, try it free at [this site](https://agireact.com)
 
+[ComfyUI Installing](https://youtu.be/ZCswfm0dBYY)
+
 # Latests:
 
-* Qwen Image edit:  qwen_image_edit_2509_Tech_Practice.json
-* Wan 2.2 Animate workflow With input video and image. Two mode: Character replacement and Pose transfer.
+* [qwen_image_edit_2509 Image editing Multiple image input](https://youtu.be/wAKoJ9e2zzo)
+* [Wan 2.2 Animate workflow With input video and image. Two mode: Character replacement and Pose transfer.](https://youtu.be/fqZv7DJKbOQ)
 * [Wan 2.2 Animate workflow](https://youtu.be/ATlpxSwENls)
 * [Wan 2.2 text to image generating](https://youtu.be/U1pKwetqDL4)
 * [Qwen_image_edit](https://youtu.be/Xg0W9N5res4)
