@@ -4,10 +4,13 @@ This repo is a collection of ComfyUI workflows. Most of them have been covered i
 
 To run them online, try it free at [this site](https://agireact.com)
 
-[ComfyUI Installing](https://youtu.be/ZCswfm0dBYY)
+For txt to image or image to image prompts, check out [here](https://agireact.com/prompt-library) and [here](https://imageprompt-nu.vercel.app/).
+
+[Video tutorial for ComfyUI Installing](https://youtu.be/ZCswfm0dBYY)
 
 # Latests:
 
+* [Z-image Turbo workflow (works on Nvidia, AMD, or Mac)](https://youtu.be/Dk51MdgujQU)
 * [qwen_image_edit_2509 Image editing Multiple image input](https://youtu.be/wAKoJ9e2zzo)
 * [Wan 2.2 Animate workflow With input video and image. Two mode: Character replacement and Pose transfer.](https://youtu.be/fqZv7DJKbOQ)
 * [Wan 2.2 Animate workflow](https://youtu.be/ATlpxSwENls)
