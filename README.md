@@ -10,7 +10,7 @@ For txt to image or image to image prompts, check out [here](https://agireact.co
 
 # Latests:
 
-* [Z-image Turbo workflow (works on Nvidia, AMD, or Mac)](https://youtu.be/Dk51MdgujQU)
+* [(GGUF) Z-image Turbo workflow (works on Nvidia, AMD, or Mac)](https://youtu.be/Dk51MdgujQU)
 * [qwen_image_edit_2509 Image editing Multiple image input](https://youtu.be/wAKoJ9e2zzo)
 * [Wan 2.2 Animate workflow With input video and image. Two mode: Character replacement and Pose transfer.](https://youtu.be/fqZv7DJKbOQ)
 * [Wan 2.2 Animate workflow](https://youtu.be/ATlpxSwENls)
