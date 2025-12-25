@@ -8,8 +8,13 @@ For txt to image or image to image prompts, check out [here](https://agireact.co
 
 [Video tutorial for ComfyUI Installing](https://youtu.be/ZCswfm0dBYY)
 
+**New:** [Mac related video tutorial](https://agireact.com/mac-tutorials)
+
 # Latests:
 
+* Updated Qwen image edit: image_qwen_image_edit_2511_tech_practice.json
+* [Z-image turbo Lora](https://youtu.be/P8maux1ikAU)
+* [Finetungin Z-image turbo use AI-toolkit](https://youtu.be/5n14YLTBS6s)
 * [(GGUF) Z-image Turbo workflow (works on Nvidia, AMD, or Mac)](https://youtu.be/Dk51MdgujQU)
 * [qwen_image_edit_2509 Image editing Multiple image input](https://youtu.be/wAKoJ9e2zzo)
 * [Wan 2.2 Animate workflow With input video and image. Two mode: Character replacement and Pose transfer.](https://youtu.be/fqZv7DJKbOQ)
@@ -27,7 +32,6 @@ For txt to image or image to image prompts, check out [here](https://agireact.co
 * [Wan2.1 Macbook MacMini text to video](https://youtu.be/SAX-Pue7kSw) 
 * [TeaCache-ComfyUI speedup](https://youtu.be/q6mZLBiKZ2M) 
 * [Wan 2.1 text or image to videos](https://youtu.be/tBKd2vB4n2o)
-
 
 # For video tutorials:
 
