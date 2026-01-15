@@ -12,6 +12,7 @@ For txt to image or image to image prompts, check out [here](https://agireact.co
 
 # Latests:
 
+* Flux2 Klein 4B base and distilled workflows.
 * Updated Qwen image edit: image_qwen_image_edit_2511_tech_practice.json
 * [Z-image turbo Lora](https://youtu.be/P8maux1ikAU)
 * [Finetungin Z-image turbo use AI-toolkit](https://youtu.be/5n14YLTBS6s)
