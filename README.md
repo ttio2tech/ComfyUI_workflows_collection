@@ -12,6 +12,7 @@ For txt to image or image to image prompts, check out [here](https://agireact.co
 
 # Latests:
 
+* Ernie-Image-Turbo-GGUF-TechPractice and Ernie_image_turbo_techPractice workflow
 * [LTX 2.3 video generating](https://youtu.be/tra9JI8aEHQ)
 * Flux2 Klein 4B base and distilled workflows.
 * Updated Qwen image edit: image_qwen_image_edit_2511_tech_practice.json

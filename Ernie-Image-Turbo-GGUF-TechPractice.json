@@ -1,0 +1,705 @@
+{
+  "id": "434bcbfd-9d9e-4519-9aa8-c2fb6f349d7a",
+  "revision": 0,
+  "last_node_id": 73,
+  "last_link_id": 32,
+  "nodes": [
+    {
+      "id": "88:71",
+      "type": "EmptyFlux2LatentImage",
+      "pos": [
+        100,
+        130
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyFlux2LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": "88:65",
+      "type": "VAEDecode",
+      "pos": [
+        3144.134765625,
+        130
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 18
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": "88:70",
+      "type": "KSampler",
+      "pos": [
+        2774.134765625,
+        130
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 20
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 21
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 22
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        616392345719593,
+        "randomize",
+        8,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": "88:67",
+      "type": "CLIPTextEncode",
+      "pos": [
+        1970,
+        130
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 25
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            21,
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": "88:83",
+      "type": "StringReplace",
+      "pos": [
+        600,
+        130
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "replace",
+          "type": "STRING",
+          "widget": {
+            "name": "replace"
+          },
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringReplace"
+      },
+      "widgets_values": [
+        "<s>[SYSTEM_PROMPT]你是一个专业的文生图 Prompt 增强助手。你将收到用户的简短图片描述及目标生成分辨率，请据此扩写为一段内容丰富、细节充分的视觉描述，以帮助文生图模型生成高质量的图片。仅输出增强后的描述，不要包含任何解释或前缀。[/SYSTEM_PROMPT][INST]{\"prompt\": \"{prompt}\"}[/INST]",
+        "{prompt}",
+        ""
+      ]
+    },
+    {
+      "id": "88:75",
+      "type": "ComfySwitchNode",
+      "pos": [
+        1600,
+        130
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "type": "STRING",
+          "link": 30
+        },
+        {
+          "name": "on_true",
+          "type": "STRING",
+          "link": 31
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "STRING",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": "88:91",
+      "type": "ConditioningZeroOut",
+      "pos": [
+        2470,
+        130
+      ],
+      "size": [
+        204.134765625,
+        26
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": "88:66",
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        100,
+        366
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF"
+      },
+      "widgets_values": [
+        "ernie-image-turbo-Q4_K_M.gguf"
+      ]
+    },
+    {
+      "id": "88:74",
+      "type": "TextGenerate",
+      "pos": [
+        1087.3281097161885,
+        -42.675793135780616
+      ],
+      "size": [
+        400,
+        372
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 28
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_text",
+          "type": "STRING",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextGenerate"
+      },
+      "widgets_values": [
+        "",
+        2048,
+        "on",
+        0.6,
+        64,
+        0.8,
+        0.05,
+        1.05,
+        0,
+        0,
+        false,
+        true
+      ]
+    },
+    {
+      "id": "88:76",
+      "type": "PrimitiveBoolean",
+      "pos": [
+        100,
+        884
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "title": "Enable prompt enhancement?",
+      "properties": {
+        "Node name for S&R": "PrimitiveBoolean"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": "88:62",
+      "type": "CLIPLoader",
+      "pos": [
+        100,
+        1072
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            25,
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "ministral-3-3b.safetensors",
+        "flux2",
+        "default"
+      ]
+    },
+    {
+      "id": "88:63",
+      "type": "VAELoader",
+      "pos": [
+        100,
+        1308
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux2-vae.safetensors"
+      ]
+    },
+    {
+      "id": 73,
+      "type": "SaveImage",
+      "pos": [
+        2197.9121079707793,
+        679.2357175600354
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 17
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Ernie-Image-Turbo-GGUF"
+      ]
+    },
+    {
+      "id": "88:78",
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        100,
+        554
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            26,
+            30
+          ]
+        }
+      ],
+      "title": "String (Multiline - Prompt)",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A full-body studio portrait of a handsome young East Asian woman sitting on the floor in front of a light purple backdrop. She is wearing a cozy, oversized lavender chunky-knit sweater, white skirt, and white socks. She is affectionately hugging a large Sanrio Kuromi plushie and looking at the camera with a gentle expression. The background is decorated with playful, hand-drawn purple doodles and text, including \"T\", \"Tech Practice\", paper airplanes, and flowers, in the style of a K-pop photocard or fanzine cover. The lighting is bright and soft, enhancing the cute and affectionate mood. Use the exact same face as in the uploaded image, no alteration, 100% unchanged. Remove her earrings."
+      ]
+    }
+  ],
+  "links": [
+    [
+      17,
+      "88:65",
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      "88:70",
+      0,
+      "88:65",
+      0,
+      "LATENT"
+    ],
+    [
+      19,
+      "88:63",
+      0,
+      "88:65",
+      1,
+      "VAE"
+    ],
+    [
+      20,
+      "88:66",
+      0,
+      "88:70",
+      0,
+      "MODEL"
+    ],
+    [
+      21,
+      "88:67",
+      0,
+      "88:70",
+      1,
+      "CONDITIONING"
+    ],
+    [
+      22,
+      "88:91",
+      0,
+      "88:70",
+      2,
+      "CONDITIONING"
+    ],
+    [
+      23,
+      "88:71",
+      0,
+      "88:70",
+      3,
+      "LATENT"
+    ],
+    [
+      24,
+      "88:75",
+      0,
+      "88:67",
+      1,
+      "STRING"
+    ],
+    [
+      25,
+      "88:62",
+      0,
+      "88:67",
+      0,
+      "CLIP"
+    ],
+    [
+      26,
+      "88:78",
+      0,
+      "88:83",
+      0,
+      "STRING"
+    ],
+    [
+      27,
+      "88:83",
+      0,
+      "88:74",
+      2,
+      "STRING"
+    ],
+    [
+      28,
+      "88:62",
+      0,
+      "88:74",
+      0,
+      "CLIP"
+    ],
+    [
+      29,
+      "88:76",
+      0,
+      "88:75",
+      2,
+      "BOOLEAN"
+    ],
+    [
+      30,
+      "88:78",
+      0,
+      "88:75",
+      0,
+      "STRING"
+    ],
+    [
+      31,
+      "88:74",
+      0,
+      "88:75",
+      1,
+      "STRING"
+    ],
+    [
+      32,
+      "88:67",
+      0,
+      "88:91",
+      0,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.3127816396579924,
+      "offset": [
+        2037.1892277214772,
+        2415.5456029534703
+      ]
+    },
+    "frontendVersion": "1.42.11"
+  },
+  "version": 0.4
+}
