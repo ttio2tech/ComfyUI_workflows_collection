@@ -12,6 +12,8 @@ For txt to image or image to image prompts, check out [here](https://agireact.co
 
 # Latests:
 
+* [Qwen Image 2.1 text to image and Image edit](https://youtu.be/XPHDdpnbcnw)
+* [Minimax H3 running locally (text or image to video)](https://youtu.be/r1PhGv-HDhA)
 * Ernie-Image-Turbo-GGUF-TechPractice and Ernie_image_turbo_techPractice workflow
 * [LTX 2.3 video generating](https://youtu.be/tra9JI8aEHQ)
 * Flux2 Klein 4B base and distilled workflows.
